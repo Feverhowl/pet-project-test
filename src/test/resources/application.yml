@@ -1,0 +1,16 @@
+dependencies:
+  load: true
+  clear: true
+
+spring:
+  jackson:
+    time-zone: Asia/Tbilisi
+  datasource:
+    url: jdbc:postgresql://localhost:5444/pet-project
+    username: admin
+    password: admin
+
+logging:
+  level: debug
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level - %msg%n'

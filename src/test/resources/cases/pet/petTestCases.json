@@ -1,0 +1,134 @@
+{
+  "GET": [
+    {
+      "CONFIGURATION": {
+        "DESCRIPTION": "Testing the method - getAll",
+        "PARAMETERS": {
+          "ENDPOINT": "",
+          "BODY": ""
+        }
+      },
+      "EXPECTED": [
+        {
+          "DATA": [
+            {
+              "id": "c77fad49-c0bc-41d9-8408-cf9d542c57b5",
+              "species": "cat",
+              "name": "Felix",
+              "birthDay": "2020-10-27",
+              "createdAt": "2021-10-27T17:23:50.245103"
+            },
+            {
+              "id": "ddfd07a1-75fc-4c89-807b-7437904737ff",
+              "species": "dog",
+              "name": "Spike",
+              "birthDay": "2020-01-11",
+              "createdAt": "2021-10-27T18:15:55.471972"
+            },
+            {
+              "id": "b2e239b9-5480-4e2e-b56d-a4952d10a156",
+              "species": "cat",
+              "name": "Barsik",
+              "birthDay": "2019-05-26",
+              "createdAt": "2022-07-19T15:47:40.765898"
+            },
+            {
+              "id": "54ec5b79-1d20-4323-98ca-714659970e75",
+              "species": "dog",
+              "name": "Gharlie",
+              "birthDay": "2018-07-29",
+              "createdAt": "2022-07-19T16:03:08.188009"
+            },
+            {
+              "id": "10068036-5350-4fdf-aba5-4d608a2db911",
+              "species": "snake",
+              "name": "Rattle",
+              "birthDay": "2001-01-01",
+              "createdAt": "2022-07-19T18:43:58.201493"
+            },
+            {
+              "id": "9a2d86ba-a197-42d7-a671-cdb1f4e495af",
+              "species": "snake",
+              "name": "Roll",
+              "birthDay": "2018-09-09",
+              "createdAt": "2022-07-17T17:59:56.812608"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "CONFIGURATION": {
+        "DESCRIPTION": "Testing the method - getAllCats",
+        "PARAMETERS": {
+          "ENDPOINT": "/allCats",
+          "BODY": ""
+        }
+      },
+      "EXPECTED": [
+        {
+          "DATA": [
+            {
+              "id": "c77fad49-c0bc-41d9-8408-cf9d542c57b5",
+              "species": "cat",
+              "name": "Felix",
+              "birthDay": "2020-10-27",
+              "createdAt": "2021-10-27T17:23:50.245103"
+            },
+            {
+              "id": "b2e239b9-5480-4e2e-b56d-a4952d10a156",
+              "species": "cat",
+              "name": "Barsik",
+              "birthDay": "2019-05-26",
+              "createdAt": "2022-07-19T15:47:40.765898"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "POST": [
+    {
+      "CONFIGURATION": {
+        "DESCRIPTION": "Testing the method - save",
+        "PARAMETERS": {
+          "ENDPOINT": "/save",
+          "BODY": "{\"species\":\"cat\",\"name\":\"Murzik\",\"birthDay\":\"2020-01-01\"}"
+        }
+      },
+      "EXPECTED": [
+        {
+          "DATA": [
+            {
+              "species": "cat",
+              "name": "Murzik",
+              "birthDay": "2020-01-01"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "CONFIGURATION": {
+        "DESCRIPTION": "Testing the method - updateOne",
+        "PARAMETERS": {
+          "ENDPOINT": "/updateOne",
+          "BODY": "{\"id\": \"9a2d86ba-a197-42d7-a671-cdb1f4e495af\",\"species\": \"dog\",\"name\": \"Robert\",\"birthDay\": \"2019-08-08\",\"createdAt\": \"2022-07-17T17:59:56.812608\"}"
+        }
+      },
+      "EXPECTED": [
+        {
+          "DATA": [
+            {
+              "id": "9a2d86ba-a197-42d7-a671-cdb1f4e495af",
+              "species": "dog",
+              "name": "Robert",
+              "birthDay": "2019-08-08",
+              "createdAt": "2022-07-17T17:59:56.812608"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
